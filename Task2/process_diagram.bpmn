@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_tQyY8F9SED-hCMUBevF0cw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_ManualMatch_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_CreateSKU_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Manager_VerifyPrices_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_SkippableInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_PriorityInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_CommentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_DescriptionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_CreatedByInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_TaskNameInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_GroupIdInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_ContentInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_NotStartedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_NotCompletedReassignInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_NotStartedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="_Task_Comm_ResolveDup_NotCompletedNotifyInputXItem" structureRef="Object"/>
+  <bpmn2:collaboration id="_593F8EE2-A62D-4006-94CA-4C83EAF247F3" name="Default Collaboration">
+    <bpmn2:participant id="_0727596F-EE05-448A-BD5F-AA7595643FB7" name="Pool Participant" processRef="process_diagram"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="process_diagram" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="process_diagram" isExecutable="true" processType="Public">
+    <bpmn2:laneSet>
+      <bpmn2:lane id="Lane_HQ_Support" name="Служба ИТ-поддержки HQ (удаленно)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Служба ИТ-поддержки HQ (удаленно)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>StartEvent_Onboarding</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_HQ_Init</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_HQ_Fix_File</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_Local_IT" name="Местный ИТ-специалист (в магазине)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Местный ИТ-специалист (в магазине)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Task_Local_RunAgent</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_Local_ManualExport</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_Local_ManualUpload</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_Extract_Status</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_Portal" name="M&amp;amp;A веб-портал / AI-сервис (система)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[M&A веб-портал / AI-сервис (система)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Gateway_Structure</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_Duplicates</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_Confidence</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_Price_Anomaly</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_Portal_FuzzyMatch</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_Manager" name="Товаровед (HQ Operator)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Товаровед (HQ Operator)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Task_Manager_ManualMatch</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Gateway_Match_Found</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_Manager_VerifyPrices</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_Comm" name="Коммерческий отдел (HQ)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Коммерческий отдел (HQ)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Task_Comm_ResolveDup</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_Manager_CreateSKU</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_ERP" name="SAP ERP (Core System)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[SAP ERP (Core System)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Task_Portal_SaveERP</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_POS" name="Cloud POS (Store System)">
+        <bpmn2:extensionElements>
+          <drools:metaData name="elementname">
+            <drools:metaValue><![CDATA[Cloud POS (Store System)]]></drools:metaValue>
+          </drools:metaData>
+        </bpmn2:extensionElements>
+        <bpmn2:flowNodeRef>Task_Portal_PublishPOS</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>EndEvent_Success</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+    </bpmn2:laneSet>
+    <bpmn2:sequenceFlow id="Flow_Publish_POS_Done" sourceRef="Task_Portal_PublishPOS" targetRef="EndEvent_Success"/>
+    <bpmn2:sequenceFlow id="Flow_Saved_ERP" sourceRef="Task_Portal_SaveERP" targetRef="Task_Portal_PublishPOS"/>
+    <bpmn2:sequenceFlow id="_8B99806C-2163-4CCE-8557-229EA13BE3AF" name="Да" sourceRef="Task_Comm_ResolveDup" targetRef="Task_Portal_SaveERP">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_AF36CDF3-6815-4787-973B-BA0E7558D9C4" sourceRef="Task_Manager_CreateSKU" targetRef="Task_Portal_SaveERP"/>
+    <bpmn2:sequenceFlow id="Flow_Price_Verify_Done" sourceRef="Task_Manager_VerifyPrices" targetRef="Task_Manager_CreateSKU"/>
+    <bpmn2:sequenceFlow id="Flow_Match_Found_Yes" name="Да" sourceRef="Gateway_Match_Found" targetRef="Task_Portal_SaveERP">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Match_Found_No" name="Нет" sourceRef="Gateway_Match_Found" targetRef="Task_Manager_VerifyPrices">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Нет]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Manual_Match_Done" sourceRef="Task_Manager_ManualMatch" targetRef="Gateway_Match_Found"/>
+    <bpmn2:sequenceFlow id="Flow_Price_Anomaly_Ok" name="Да" sourceRef="Gateway_Price_Anomaly" targetRef="Task_Portal_SaveERP">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Price_Anomaly_Err" name="Нет" sourceRef="Gateway_Price_Anomaly" targetRef="Task_Manager_VerifyPrices">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Нет]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Low_Conf" name="Нет" sourceRef="Gateway_Confidence" targetRef="Task_Manager_ManualMatch">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Нет]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_High_Conf" name="Да" sourceRef="Gateway_Confidence" targetRef="Gateway_Price_Anomaly">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Yes_Dup" name="Да" sourceRef="Gateway_Duplicates" targetRef="Task_Comm_ResolveDup">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_No_Dup" name="Нет" sourceRef="Gateway_Duplicates" targetRef="Gateway_Confidence">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Нет]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_4" sourceRef="Task_Portal_FuzzyMatch" targetRef="Gateway_Duplicates"/>
+    <bpmn2:sequenceFlow id="Flow_Struct_Ok" name="Да" sourceRef="Gateway_Structure" targetRef="Task_Portal_FuzzyMatch">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_B5052222-99FF-4AC8-8C12-31B5C861A3F0" name="Да" sourceRef="Gateway_Extract_Status" targetRef="Gateway_Structure">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Да]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Manual_Upload_To_Validate" sourceRef="Task_Local_ManualUpload" targetRef="Gateway_Structure"/>
+    <bpmn2:sequenceFlow id="Flow_Manual_Export_To_Upload" sourceRef="Task_Local_ManualExport" targetRef="Task_Local_ManualUpload"/>
+    <bpmn2:sequenceFlow id="_BA50CEAE-A7E3-4846-971D-78193A86D222" name="Нет" sourceRef="Gateway_Extract_Status" targetRef="Task_Local_ManualExport">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Нет]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_RunAgent_To_Status" sourceRef="Task_Local_RunAgent" targetRef="Gateway_Extract_Status">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="Flow_Fix_File_To_Init" sourceRef="Task_HQ_Fix_File" targetRef="Task_Local_RunAgent"/>
+    <bpmn2:sequenceFlow id="Flow_HQ_To_Local" sourceRef="Task_HQ_Init" targetRef="Task_Local_RunAgent"/>
+    <bpmn2:sequenceFlow id="Flow_Start" sourceRef="StartEvent_Onboarding" targetRef="Task_HQ_Init"/>
+    <bpmn2:endEvent id="EndEvent_Success" name="Магазин запущен и готов к работе">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Магазин запущен и готов к работе]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Publish_POS_Done</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="Task_Portal_PublishPOS" name="Публикация цен и каталога в Cloud POS">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Публикация цен и каталога в Cloud POS]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Saved_ERP</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Publish_POS_Done</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_Portal_SaveERP" name="Сохранение сопоставленного каталога в SAP ERP">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Сохранение сопоставленного каталога в SAP ERP]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Price_Anomaly_Ok</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Match_Found_Yes</bpmn2:incoming>
+      <bpmn2:incoming>_AF36CDF3-6815-4787-973B-BA0E7558D9C4</bpmn2:incoming>
+      <bpmn2:incoming>_8B99806C-2163-4CCE-8557-229EA13BE3AF</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Saved_ERP</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:userTask id="Task_Comm_ResolveDup" name="Ручной разбор дубликатов в конфликтном логе">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ручной разбор дубликатов в конфликтном логе]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Yes_Dup</bpmn2:incoming>
+      <bpmn2:outgoing>_8B99806C-2163-4CCE-8557-229EA13BE3AF</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="Task_Comm_ResolveDup_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Comm_ResolveDup_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Comm_ResolveDup_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Comm_ResolveDup_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>Task_Comm_ResolveDup_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Comm_ResolveDup_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Comm_ResolveDup_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[Task]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Comm_ResolveDup_TaskNameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Comm_ResolveDup_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Comm_ResolveDup_SkippableInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_Manager_VerifyPrices" name="Ручная сверка и утверждение цен">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ручная сверка и утверждение цен]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Price_Anomaly_Err</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Match_Found_No</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Price_Verify_Done</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="Task_Manager_VerifyPrices_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_VerifyPrices_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Manager_VerifyPrices_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_VerifyPrices_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>Task_Manager_VerifyPrices_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Manager_VerifyPrices_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_VerifyPrices_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[Task]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_VerifyPrices_TaskNameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_VerifyPrices_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_VerifyPrices_SkippableInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_Manager_CreateSKU" name="Создание нового SKU в каталоге">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Создание нового SKU в каталоге]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Price_Verify_Done</bpmn2:incoming>
+      <bpmn2:outgoing>_AF36CDF3-6815-4787-973B-BA0E7558D9C4</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="Task_Manager_CreateSKU_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_CreateSKU_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Manager_CreateSKU_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_CreateSKU_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>Task_Manager_CreateSKU_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Manager_CreateSKU_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_CreateSKU_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[Task]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_CreateSKU_TaskNameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_CreateSKU_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_CreateSKU_SkippableInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="Gateway_Match_Found" name="Совпадение найдено?" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Совпадение найдено?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Manual_Match_Done</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Match_Found_No</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Match_Found_Yes</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_Manager_ManualMatch" name="Сверка карточки товара и выбор из Топ-3">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Сверка карточки товара и выбор из Топ-3]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Low_Conf</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Manual_Match_Done</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="Task_Manager_ManualMatch_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_ManualMatch_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="Task_Manager_ManualMatch_SkippableInputX" drools:dtype="Object" itemSubjectRef="_Task_Manager_ManualMatch_SkippableInputXItem" name="Skippable"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>Task_Manager_ManualMatch_TaskNameInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>Task_Manager_ManualMatch_SkippableInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_ManualMatch_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[Task]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_ManualMatch_TaskNameInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:targetRef>Task_Manager_ManualMatch_SkippableInputX</bpmn2:targetRef>
+        <bpmn2:assignment>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[Task_Manager_ManualMatch_SkippableInputX]]></bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:userTask>
+    <bpmn2:task id="Task_Portal_FuzzyMatch" name="ИИ-анализ и нечеткое сравнение SKU">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[ИИ-анализ и нечеткое сравнение SKU]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Struct_Ok</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_4</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="Gateway_Price_Anomaly" name="Отклонение цены &lt;= 30%?" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Отклонение цены <= 30%?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_High_Conf</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Price_Anomaly_Err</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Price_Anomaly_Ok</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gateway_Confidence" name="Уверенность ИИ &gt;= 95%?" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Уверенность ИИ >= 95%?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_No_Dup</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_High_Conf</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Low_Conf</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gateway_Duplicates" name="Обнаружены дубликаты штрихкодов?" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Обнаружены дубликаты штрихкодов?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_4</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_No_Dup</bpmn2:outgoing>
+      <bpmn2:outgoing>Flow_Yes_Dup</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gateway_Structure" name="Структура корректна?" gatewayDirection="Converging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Структура корректна?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Manual_Upload_To_Validate</bpmn2:incoming>
+      <bpmn2:incoming>_B5052222-99FF-4AC8-8C12-31B5C861A3F0</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Struct_Ok</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="Gateway_Extract_Status" name="Выгрузка успешна?" gatewayDirection="Diverging">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Выгрузка успешна?]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_RunAgent_To_Status</bpmn2:incoming>
+      <bpmn2:outgoing>_BA50CEAE-A7E3-4846-971D-78193A86D222</bpmn2:outgoing>
+      <bpmn2:outgoing>_B5052222-99FF-4AC8-8C12-31B5C861A3F0</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="Task_Local_ManualUpload" name="Загрузка файла в M&amp;A веб-портал">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Загрузка файла в M&A веб-портал]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Manual_Export_To_Upload</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Manual_Upload_To_Validate</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_Local_ManualExport" name="Ручной экспорт локальной БД по инструкции">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ручной экспорт локальной БД по инструкции]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_BA50CEAE-A7E3-4846-971D-78193A86D222</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_Manual_Export_To_Upload</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_Local_RunAgent" name="Автоматический запуск выгрузки через M&amp;A агент">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Автоматический запуск выгрузки через M&A агент]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_HQ_To_Local</bpmn2:incoming>
+      <bpmn2:incoming>Flow_Fix_File_To_Init</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_RunAgent_To_Status</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_HQ_Fix_File" name="Корректировка настроек агента/скрипта экспорта">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Корректировка настроек агента/скрипта экспорта]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>Flow_Fix_File_To_Init</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_HQ_Init" name="Анализ СУБД и подготовка инструкции по экспорту">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Анализ СУБД и подготовка инструкции по экспорту]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>Flow_Start</bpmn2:incoming>
+      <bpmn2:outgoing>Flow_HQ_To_Local</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:startEvent id="StartEvent_Onboarding" name="Запуск интеграции магазина">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Запуск интеграции магазина]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>Flow_Start</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="process_diagram">
+      <bpmndi:BPMNShape id="shape_StartEvent_Onboarding" bpmnElement="StartEvent_Onboarding">
+        <dc:Bounds height="56" width="56" x="294" y="142"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_HQ_Init" bpmnElement="Task_HQ_Init">
+        <dc:Bounds height="80" width="150" x="460" y="130"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_HQ_Fix_File" bpmnElement="Task_HQ_Fix_File">
+        <dc:Bounds height="80" width="150" x="648" y="130"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Local_RunAgent" bpmnElement="Task_Local_RunAgent">
+        <dc:Bounds height="80" width="150" x="460" y="310"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Local_ManualExport" bpmnElement="Task_Local_ManualExport">
+        <dc:Bounds height="80" width="150" x="782" y="310"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Local_ManualUpload" bpmnElement="Task_Local_ManualUpload">
+        <dc:Bounds height="80" width="150" x="975" y="310"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Extract_Status" bpmnElement="Gateway_Extract_Status">
+        <dc:Bounds height="56" width="56" x="671" y="322"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Structure" bpmnElement="Gateway_Structure">
+        <dc:Bounds height="56" width="56" x="671" y="521"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Duplicates" bpmnElement="Gateway_Duplicates">
+        <dc:Bounds height="56" width="56" x="1008" y="521"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Confidence" bpmnElement="Gateway_Confidence">
+        <dc:Bounds height="56" width="56" x="1192" y="521"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Price_Anomaly" bpmnElement="Gateway_Price_Anomaly">
+        <dc:Bounds height="56" width="56" x="1403" y="521"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Portal_FuzzyMatch" bpmnElement="Task_Portal_FuzzyMatch">
+        <dc:Bounds height="80" width="150" x="788" y="509"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Manager_ManualMatch" bpmnElement="Task_Manager_ManualMatch">
+        <dc:Bounds height="80" width="150" x="1145" y="726"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Gateway_Match_Found" bpmnElement="Gateway_Match_Found">
+        <dc:Bounds height="56" width="56" x="1373" y="738"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Manager_CreateSKU" bpmnElement="Task_Manager_CreateSKU">
+        <dc:Bounds height="80" width="150" x="1535" y="912"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Manager_VerifyPrices" bpmnElement="Task_Manager_VerifyPrices">
+        <dc:Bounds height="80" width="150" x="1535" y="726"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Comm_ResolveDup" bpmnElement="Task_Comm_ResolveDup">
+        <dc:Bounds height="80" width="150" x="961" y="900"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Portal_SaveERP" bpmnElement="Task_Portal_SaveERP">
+        <dc:Bounds height="80" width="150" x="1329" y="1092"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Task_Portal_PublishPOS" bpmnElement="Task_Portal_PublishPOS">
+        <dc:Bounds height="80" width="150" x="1329" y="1253"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_EndEvent_Success" bpmnElement="EndEvent_Success">
+        <dc:Bounds height="56" width="56" x="1667" y="1265"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_HQ_Support" bpmnElement="Lane_HQ_Support">
+        <dc:Bounds height="180" width="1620" x="190" y="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_Local_IT" bpmnElement="Lane_Local_IT">
+        <dc:Bounds height="180" width="1620" x="190" y="260"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_Portal" bpmnElement="Lane_Portal">
+        <dc:Bounds height="230" width="1620" x="190" y="440"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_Manager" bpmnElement="Lane_Manager">
+        <dc:Bounds height="180" width="1620" x="190" y="670"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_Comm" bpmnElement="Lane_Comm">
+        <dc:Bounds height="180" width="1620" x="190" y="850"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_ERP" bpmnElement="Lane_ERP">
+        <dc:Bounds height="180" width="1620" x="190" y="1030"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape_Lane_POS" bpmnElement="Lane_POS">
+        <dc:Bounds height="180" width="1620" x="190" y="1210"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape_StartEvent_Onboarding_to_shape_Task_HQ_Init" bpmnElement="Flow_Start">
+        <di:waypoint x="330" y="160"/>
+        <di:waypoint x="460" y="168"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_HQ_Init_to_shape_Task_Local_RunAgent" bpmnElement="Flow_HQ_To_Local">
+        <di:waypoint x="535" y="210"/>
+        <di:waypoint x="535" y="310"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_HQ_Fix_File_to_shape_Task_Local_RunAgent" bpmnElement="Flow_Fix_File_To_Init">
+        <di:waypoint x="723" y="210"/>
+        <di:waypoint x="723" y="268.9559749704142"/>
+        <di:waypoint x="535" y="268.9559749704142"/>
+        <di:waypoint x="535" y="310"/>
+        <di:waypoint x="535" y="310"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Local_RunAgent_to_shape_Gateway_Extract_Status" bpmnElement="Flow_RunAgent_To_Status">
+        <di:waypoint x="610" y="350"/>
+        <di:waypoint x="671" y="350"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Extract_Status_to_shape_Task_Local_ManualExport" bpmnElement="_BA50CEAE-A7E3-4846-971D-78193A86D222">
+        <di:waypoint x="727" y="350"/>
+        <di:waypoint x="782" y="350"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Local_ManualExport_to_shape_Task_Local_ManualUpload" bpmnElement="Flow_Manual_Export_To_Upload">
+        <di:waypoint x="932" y="350"/>
+        <di:waypoint x="975" y="350"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Local_ManualUpload_to_shape_Gateway_Structure" bpmnElement="Flow_Manual_Upload_To_Validate">
+        <di:waypoint x="1050" y="390"/>
+        <di:waypoint x="1050" y="463.0224299704143"/>
+        <di:waypoint x="699" y="463.0224299704143"/>
+        <di:waypoint x="696" y="521"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Extract_Status_to_shape_Gateway_Structure" bpmnElement="_B5052222-99FF-4AC8-8C12-31B5C861A3F0">
+        <di:waypoint x="699" y="350"/>
+        <di:waypoint x="699" y="521"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Structure_to_shape_Task_Portal_FuzzyMatch" bpmnElement="Flow_Struct_Ok">
+        <di:waypoint x="727" y="549"/>
+        <di:waypoint x="788" y="549"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Portal_FuzzyMatch_to_shape_Gateway_Duplicates" bpmnElement="Flow_4">
+        <di:waypoint x="938" y="549"/>
+        <di:waypoint x="1008" y="546"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Duplicates_to_shape_Gateway_Confidence" bpmnElement="Flow_No_Dup">
+        <di:waypoint x="1058" y="546"/>
+        <di:waypoint x="1192" y="546"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Duplicates_to_shape_Task_Comm_ResolveDup" bpmnElement="Flow_Yes_Dup">
+        <di:waypoint x="1033" y="571"/>
+        <di:waypoint x="1036" y="900"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Confidence_to_shape_Gateway_Price_Anomaly" bpmnElement="Flow_High_Conf">
+        <di:waypoint x="1242" y="546"/>
+        <di:waypoint x="1403" y="546"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Confidence_to_shape_Task_Manager_ManualMatch" bpmnElement="Flow_Low_Conf">
+        <di:waypoint x="1217" y="571"/>
+        <di:waypoint x="1220" y="726"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Price_Anomaly_to_shape_Task_Manager_VerifyPrices" bpmnElement="Flow_Price_Anomaly_Err">
+        <di:waypoint x="1428" y="571"/>
+        <di:waypoint x="1431" y="641"/>
+        <di:waypoint x="1729" y="641"/>
+        <di:waypoint x="1729" y="766"/>
+        <di:waypoint x="1685" y="766"/>
+        <di:waypoint x="1685" y="766"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Price_Anomaly_to_shape_Task_Portal_SaveERP" bpmnElement="Flow_Price_Anomaly_Ok">
+        <di:waypoint x="1453" y="546"/>
+        <di:waypoint x="1778" y="549"/>
+        <di:waypoint x="1778" y="1132"/>
+        <di:waypoint x="1479" y="1132"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Manager_ManualMatch_to_shape_Gateway_Match_Found" bpmnElement="Flow_Manual_Match_Done">
+        <di:waypoint x="1295" y="766"/>
+        <di:waypoint x="1373" y="766"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Match_Found_to_shape_Task_Manager_VerifyPrices" bpmnElement="Flow_Match_Found_No">
+        <di:waypoint x="1423" y="763"/>
+        <di:waypoint x="1535" y="766"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Gateway_Match_Found_to_shape_Task_Portal_SaveERP" bpmnElement="Flow_Match_Found_Yes">
+        <di:waypoint x="1401" y="794"/>
+        <di:waypoint x="1401" y="902"/>
+        <di:waypoint x="1404" y="1132"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Manager_VerifyPrices_to_shape_Task_Manager_CreateSKU" bpmnElement="Flow_Price_Verify_Done">
+        <di:waypoint x="1610" y="806"/>
+        <di:waypoint x="1610" y="952"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Manager_CreateSKU_to_shape_Task_Portal_SaveERP" bpmnElement="_AF36CDF3-6815-4787-973B-BA0E7558D9C4">
+        <di:waypoint x="1535" y="952"/>
+        <di:waypoint x="1402" y="952"/>
+        <di:waypoint x="1402" y="952"/>
+        <di:waypoint x="1404" y="1092"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Comm_ResolveDup_to_shape_Task_Portal_SaveERP" bpmnElement="_8B99806C-2163-4CCE-8557-229EA13BE3AF">
+        <di:waypoint x="1036" y="940"/>
+        <di:waypoint x="1036" y="1132"/>
+        <di:waypoint x="1329" y="1129.1816075"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Portal_SaveERP_to_shape_Task_Portal_PublishPOS" bpmnElement="Flow_Saved_ERP">
+        <di:waypoint x="1419.299845" y="1166.3632149999999"/>
+        <di:waypoint x="1404" y="1253"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape_Task_Portal_PublishPOS_to_shape_EndEvent_Success" bpmnElement="Flow_Publish_POS_Done">
+        <di:waypoint x="1479" y="1293"/>
+        <di:waypoint x="1667" y="1283"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="StartEvent_Onboarding">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_HQ_Init">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_HQ_Fix_File">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Local_RunAgent">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Local_ManualExport">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Local_ManualUpload">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Portal_FuzzyMatch">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Manager_ManualMatch">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Manager_CreateSKU">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Manager_VerifyPrices">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Comm_ResolveDup">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Portal_SaveERP">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="Task_Portal_PublishPOS">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_tQyY8F9SED-hCMUBevF0cw</bpmn2:source>
+    <bpmn2:target>_tQyY8F9SED-hCMUBevF0cw</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
